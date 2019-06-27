@@ -31,13 +31,12 @@ public class EsConfig {
 
     @Bean
     public HttpHost httpHost(){
-        return new HttpHost(host,port,"http");
+        return new HttpHost(host, port,"http");
     }
 
     @Bean(initMethod="init",destroyMethod="close")
     public ESClientSpringFactory getFactory(){
-        return ESClientSpringFactory.
-                build(httpHost(), connectNum, connectPerRoute);
+        return ESClientSpringFactory.build(httpHost(), connectNum, connectPerRoute);
     }
 
     @Bean
