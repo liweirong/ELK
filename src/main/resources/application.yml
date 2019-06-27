@@ -1,5 +1,10 @@
 spring:
   data:
-    elasticsearch:
+    elasticSearch:
+      host: localhost
+      port: 9200
       cluster-name: elasticsearch
-      cluster-nodes: localhost:9300 
+      cluster-nodes: localhost:9300
+      client:
+        connectNum: 10
+        connectPerRoute: 50
